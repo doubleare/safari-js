@@ -1,0 +1,19 @@
+.goods {
+    padding: 88px 0 50px;
+    &__row ,
+    .dan__row{
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        margin-top: 104px;
+    }
+    &__col {
+        width: 32%;
+        text-align: center;
+    }
+    &__top {
+        position: absolute;
+        bottom: 3%;
+        right: 0%;
+    }
+}

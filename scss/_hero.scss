@@ -1,0 +1,99 @@
+.hero {
+    background: url('../images/Logo.png') no-repeat center;
+    background-color: #ED165F;
+    background-size: 60%;
+    text-align: center;
+    height: calc(100vh - 75px);
+    &__link {
+        display: inline-block;
+        padding-bottom: 20px;
+        position: relative;
+        color: white;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 14px;
+        transition: 0.4s;
+        border-bottom: 1px solid transparent; 
+        &:hover {
+            color: #FF69B4;
+            border-bottom: 1px solid #FF69B4;
+            &::after {
+                transform: translateY(210%);
+                border: 3px solid #FF69B4;
+            } 
+            &::before {
+                transform: translateY(100%)rotate(45deg);
+                border-bottom: 3px solid #FF69B4;
+                border-right: 3px solid#FF69B4;
+            } 
+        }
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: transparent;
+            transition: 0.4s;
+        }
+        &::after {
+            width: 4px;
+            height: 4px;
+            right: 50%;
+            bottom: -50%;
+            border: 3px solid white;
+            border-radius: 50% ;
+        }
+        &::before {
+            width: 12px;
+            height: 12px;
+            right: 49.1%;
+            bottom: -100%;
+            transform: rotate(45deg);
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+        }
+    }
+}
+
+.slick-track {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.slick-slide {
+    margin: auto;
+    width:350px !important;
+    text-align: center;
+    outline: none;
+    height: 72vh;
+}
+
+.slick-dots {
+		display: flex;
+		justify-content: center;
+        margin-bottom: 30px;
+		li {
+			&:last-child {
+				button {
+					margin-right: 0;
+				}
+			}
+			&.slick-active {
+				button {
+					background-color: white;
+				}
+			}
+		}
+		button {
+			border-radius: 50%;
+			font-size: 0;
+			width: 16px;
+			height: 16px;
+			outline: none;
+			margin-right: 26px;
+			background: transparent;
+			border: 2px solid white;
+			transition: 0.3s;
+			cursor: pointer;
+		}
+	}
